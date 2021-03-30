@@ -44,6 +44,7 @@ class DM{
         this.main=main;
     }
     // 4b. Below the constructor, copy the "storyline" method from questions 1-3 and add it as a prototype on the DM class
+    // Due to how storyline in 1c and 2c are handled, it is impossible to create a generic method that would accurately capture both without a string in addition to encapsulate it.
     storyline(title, main){
         return `${this.title} ${this.main}`;
     }
