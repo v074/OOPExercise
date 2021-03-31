@@ -6,9 +6,9 @@ const mulan={
     quote:function(){
         return `Dishonor! Dishonor on your whole family!`;
     },
-    // 1c. Create another method called "storyline" that RETURNS the following string `In the movie Mulan, to save her father from death in the army, a young maiden named Fa Mulan secretly goes in his place and becomes one of China's greatest heroines in the process.` by using the THIS keyword to access the values of "Mulan" & "Fa Mulan".
+    // 1c. Create another method called "storyline" that RETURNS the following string `The movie Mulan is about Fa Mulan.` by using the THIS keyword to access the values of "Mulan" & "Fa Mulan".
     storyline:function(){
-        return `In the movie ${this.title}, to save her father from death in the army, a young maiden named ${this.main} secretly goes in his place and becomes one of China's greatest heroines in the process.`;
+        return `The movie ${this.title} is about ${this.main}`;
     }
 };
 // 2a. Create another const variable called "tangled" and set the value to an object with the following properties (Property name of "title" with the value set to the following string `Tangled` & a property name of "main" with the value set to the following string `Rapunzel`).
@@ -19,9 +19,9 @@ const tangled={
     quote:function(){
         return `I can't believe I did this! I can't believe I did this! I have to go home! I am never going back! I'm a horrible daughter! BEST DAY EVER!`;
     },
-    // 2c. Create another method called "storyline" that RETURNS the following string `In Tangled, The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.` by using the THIS keyword to access the values of "Tangled" and "Rapunzel"
+    // 2c. Create another method called "storyline" that RETURNS the following string `The movie Tangled is about Rapunzel.` by using the THIS keyword to access the values of "Tangled" and "Rapunzel"
     storyline:function(){
-        return `In ${this.title}, The magically long-haired ${this.main} has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.`
+        return `The movie ${this.title} is about ${this.main}`;
     }
 };
 // 3a. Create a constructor function called "disneyMovie" that takes in the following parameters ("title" and "main") and sets them as properties. (HINT: You will need to use the THIS keyword)
@@ -31,7 +31,7 @@ function DisneyMovie(title, main){
 }
 // 3b. Using the PROTOTYPE keyword, copy the "storyline" method from questions 1 & 2 and add it as a prototype on the disneyMovie constructor function
 DisneyMovie.prototype.storyline=function(){
-    return `${this.title} ${this.main}`;
+    return `The movie ${this.title} is about ${this.main}`;
 }
 // 3c. Using the NEW keyword, create a new object that matches the "mulan" object from question 1 by passing in the appropriate values and set the new created object to a const variable called mulan1
 const mulan1=new DisneyMovie(`Mulan`, `Fa Mulan`);
@@ -44,9 +44,8 @@ class DM{
         this.main=main;
     }
     // 4b. Below the constructor, copy the "storyline" method from questions 1-3 and add it as a prototype on the DM class
-    // Due to how storyline in 1c and 2c are handled, it is impossible to create a generic method that would accurately capture both without a string in addition to encapsulate it.
     storyline(title, main){
-        return `${this.title} ${this.main}`;
+        return `The movie ${this.title} is about ${this.main}`;
     }
     //4e
     static loveDisneyMovies(){
