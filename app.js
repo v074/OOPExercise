@@ -44,7 +44,7 @@ class DM{
         this.main=main;
     }
     // 4b. Below the constructor, copy the "storyline" method from questions 1-3 and add it as a prototype on the DM class
-    storyline(title, main){
+    storyline(){
         return `The movie ${this.title} is about ${this.main}`;
     }
     //4e
